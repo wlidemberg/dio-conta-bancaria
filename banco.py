@@ -69,31 +69,12 @@ while True:
       continue
     print('Depositos --------------------------------------------')  
     for id,  valor in enumerate(saldo):
-      contar = str(valor)
-      if len(contar) == 7:
-        print(f'{id+1} ----------------------[+] R$ {valor:.2f}')
-      elif len(contar) == 6:
-        print(f'{id+1} ----------------------[+] R$  {valor:.2f}')
-      elif len(contar) == 5:
-        print(f'{id+1} ----------------------[+] R$   {valor:.2f}')
-      elif len(contar) == 4:
-        print(f'{id+1} ----------------------[+] R$    {valor:.2f}')
-      elif len(contar) == 3:
-        print(f'{id+1} ----------------------[+] R$     {valor:.2f}')    
-
+      print(f"{id+1:2} {'-'*20} [+] R$ {valor:8.2f}")
+      
     print('\nSaques ---------------------------------------------') 
     for id, valor in enumerate(saques):
-      contar = str(valor)        
-      if len(contar) == 7:
-        print(f'{id+1} ----------------------[-] R$ {valor:.2f}')
-      elif len(contar) == 6:
-        print(f'{id+1} ----------------------[-] R$  {valor:.2f}')
-      elif len(contar) == 5:
-        print(f'{id+1} ----------------------[-] R$   {valor:.2f}')
-      elif len(contar) == 4:
-        print(f'{id+1} ----------------------[-] R$    {valor:.2f}')
-      elif len(contar) == 3:
-        print(f'{id+1} ----------------------[-] R$     {valor:.2f}')  
+      print(f"{id+1:<2} {'-'*20} [-] R$ {valor:8.2f}")
+    
     print('-'*100)
     print('-'*100)
     print(f'Saldo atual ------------[+] R$ {saldo_atual:.2f} | Saques realizados no dia {quantidade_saques}')
